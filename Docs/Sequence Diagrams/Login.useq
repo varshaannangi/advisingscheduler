@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.9" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="uta.cse4361.beans.LogInBean" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/beans/LogInBean.java" binary="false" label="logInBean" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="2">      
+      <position height="283" width="0" x="0" y="134"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="202" width="0" x="0" y="188"/>    
+    </execution>  
+  </object>  
+  <object id="9" language="java" name="uta.cse4361.databases.DatabaseManager" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/databases/DatabaseManager.java" binary="false" label="DM" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="0" x="0" y="228"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="27" width="0" x="0" y="336"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="LogIn():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="DatabaseManager()" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="validate(java.lang.String,java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>
+</sequence-diagram>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.9" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="uta.cse4361.beans.TimeAllocationBean" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/beans/TimeAllocationBean.java" binary="false" label="timeAllocationBean" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="94" y="0"/>    
+    <execution id="2">      
+      <position height="889" width="0" x="0" y="253"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="808" width="0" x="0" y="307"/>    
+    </execution>  
+  </object>  
+  <object id="13" language="java" name="uta.cse4361.businessobjects.SlotFactory" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/businessobjects/SlotFactory.java" binary="false" label="&lt;static&gt;" 
+    type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="0" x="0" y="347"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="uta.cse4361.businessobjects.SlotFactory" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/businessobjects/SlotFactory.java" binary="false" label="aff" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="8">      
+      <position height="579" width="0" x="0" y="401"/>    
+    </execution>    
+    <execution id="16">      
+      <position height="27" width="0" x="0" y="455"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="27" width="0" x="0" y="522"/>    
+    </execution>    
+    <execution id="26">      
+      <position height="27" width="0" x="0" y="751"/>    
+    </execution>    
+    <execution id="32">      
+      <position height="27" width="0" x="0" y="926"/>    
+    </execution>  
+  </object>  
+  <object id="33" language="java" name="java.util.ArrayList" project="AdvisingScheduler" 
+    file="C:/Program Files/Java/jre1.8.0_73/lib/rt.jar" binary="true" label="flyweightsToReturn" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="20">      
+      <position height="27" width="0" x="0" y="562"/>    
+    </execution>    
+    <execution id="22">      
+      <position height="27" width="0" x="0" y="616"/>    
+    </execution>    
+    <execution id="28">      
+      <position height="27" width="0" x="0" y="791"/>    
+    </execution>  
+  </object>  
+  <object id="34" language="java" name="uta.cse4361.businessobjects.AppointmentSlot" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/businessobjects/AppointmentSlot.java" binary="false" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="24">      
+      <position height="27" width="0" x="0" y="670"/>    
+    </execution>  
+  </object>  
+  <object id="35" language="java" name="uta.cse4361.businessobjects.AvailableSlot" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/businessobjects/AvailableSlot.java" binary="false" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="30">      
+      <position height="27" width="0" x="0" y="845"/>    
+    </execution>  
+  </object>  
+  <object id="36" language="java" name="uta.cse4361.databases.DatabaseManager" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/databases/DatabaseManager.java" binary="false" label="databaseManager" 
+    type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="10">      
+      <position height="27" width="0" x="0" y="1007"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="27" width="0" x="0" y="1061"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="allocateTime():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="getInstance():uta.cse4361.businessobjects.SlotFactory" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="generateSlots(java.util.Date,int,int,int,int,int,java.lang.String):java.util.ArrayList&lt;Slot&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="DatabaseManager()" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="saveSlots(java.util.ArrayList&lt;uta.cse4361.businessobjects.Slot&gt;):java.lang.String" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="15" operation="isValidTime(int,int,int,int):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="17" operation="determineNumberOfFlyweights(int,int,int,int):int" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" operation="ArrayList()" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="21" operation="add(E):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>  
+  <message id="23" operation="AppointmentSlot(int,java.util.Date,int,int)" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>  
+  <message id="25" operation="updateTimes():void" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="26"/>  
+  </message>  
+  <message id="27" operation="add(E):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="28"/>  
+  </message>  
+  <message id="29" operation="AvailableSlot(java.util.Date,int,int,int)" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="30"/>  
+  </message>  
+  <message id="31" operation="updateTimes():void" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="32"/>  
+  </message>
+</sequence-diagram>

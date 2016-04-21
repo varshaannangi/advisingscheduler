@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.9" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="uta.cse4361.beans.ScheduleAppointmentBean" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/beans/ScheduleAppointmentBean.java" binary="false" 
+    label="scheduleAppointmentBean" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="2">      
+      <position height="1039" width="0" x="0" y="195"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="958" width="0" x="0" y="249"/>    
+    </execution>  
+  </object>  
+  <object id="13" language="java" name="uta.cse4361.businessobjects.Appointment" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/businessobjects/Appointment.java" binary="false" label="a" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="0" x="0" y="289"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="27" width="0" x="0" y="343"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="uta.cse4361.businessobjects.Scheduler" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/businessobjects/Scheduler.java" binary="false" label="s" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="10">      
+      <position height="27" width="0" x="0" y="397"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="729" width="0" x="0" y="451"/>    
+    </execution>  
+  </object>  
+  <object id="41" language="java" name="uta.cse4361.databases.DatabaseManager" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/databases/DatabaseManager.java" binary="false" label="databaseManager" 
+    type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="16">      
+      <position height="27" width="0" x="0" y="478"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="27" width="0" x="0" y="532"/>    
+    </execution>    
+    <execution id="30">      
+      <position height="27" width="0" x="0" y="856"/>    
+    </execution>  
+  </object>  
+  <object id="42" language="java" name="uta.cse4361.businessobjects.Appointment" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/businessobjects/Appointment.java" binary="false" label="appointment" 
+    type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="20">      
+      <position height="27" width="0" x="0" y="586"/>    
+    </execution>    
+    <execution id="22">      
+      <position height="27" width="0" x="0" y="640"/>    
+    </execution>    
+    <execution id="24">      
+      <position height="27" width="0" x="0" y="694"/>    
+    </execution>    
+    <execution id="26">      
+      <position height="27" width="0" x="0" y="748"/>    
+    </execution>    
+    <execution id="28">      
+      <position height="27" width="0" x="0" y="802"/>    
+    </execution>    
+    <execution id="38">      
+      <position height="27" width="0" x="0" y="1072"/>    
+    </execution>  
+  </object>  
+  <object id="43" language="java" name="uta.cse4361.businessobjects.EmailManager" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/businessobjects/EmailManager.java" binary="false" label="emailManager" 
+    type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="32">      
+      <position height="27" width="0" x="0" y="910"/>    
+    </execution>    
+    <execution id="34">      
+      <position height="27" width="0" x="0" y="964"/>    
+    </execution>    
+    <execution id="36">      
+      <position height="27" width="0" x="0" y="1018"/>    
+    </execution>    
+    <execution id="40">      
+      <position height="27" width="0" x="0" y="1126"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="scheduleAppointment():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="Appointment()" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="initialize(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.util.Date,int,int,int,int,java.lang.String,java.lang.String):boolean" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="Scheduler()" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="schedule(uta.cse4361.businessobjects.Appointment):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="15" operation="DatabaseManager()" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="17" operation="isFree(java.util.Date,int,int,int,int):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" operation="getDate():java.util.Date" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="21" operation="getStartHour():int" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>  
+  <message id="23" operation="getEndHour():int" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>  
+  <message id="25" operation="getStartMinute():int" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="26"/>  
+  </message>  
+  <message id="27" operation="getEndMinute():int" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="28"/>  
+  </message>  
+  <message id="29" operation="saveAppointment(uta.cse4361.businessobjects.Appointment):java.lang.String" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="30"/>  
+  </message>  
+  <message id="31" operation="EmailManager(uta.cse4361.businessobjects.Appointment)" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="32"/>  
+  </message>  
+  <message id="33" operation="setSubject(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="34"/>  
+  </message>  
+  <message id="35" operation="setBody(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="36"/>  
+  </message>  
+  <message id="37" operation="getRequestType():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="38"/>  
+  </message>  
+  <message id="39" operation="sendOutlookEmail():void" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="40"/>  
+  </message>
+</sequence-diagram>

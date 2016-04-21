@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.9" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="uta.cse4361.beans.CreateAdvisorAccountBean" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/beans/CreateAdvisorAccountBean.java" binary="false" 
+    label="createAdvisorAccountBean" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="2">      
+      <position height="391" width="0" x="0" y="171"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="310" width="0" x="0" y="225"/>    
+    </execution>  
+  </object>  
+  <object id="13" language="java" name="uta.cse4361.businessobjects.AdvisorAccount" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/businessobjects/AdvisorAccount.java" binary="false" label="AA" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="0" x="0" y="265"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="27" width="0" x="0" y="373"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="uta.cse4361.databases.DatabaseManager" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/databases/DatabaseManager.java" binary="false" label="dm" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="10">      
+      <position height="27" width="0" x="0" y="427"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="27" width="0" x="0" y="481"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="Advisor():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="AdvisorAccount()" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="initialize(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int):boolean" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="DatabaseManager()" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="register(uta.cse4361.businessobjects.AdvisorAccount):java.lang.String" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>
+</sequence-diagram>

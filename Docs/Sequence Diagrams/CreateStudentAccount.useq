@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.9" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="uta.cse4361.beans.CreateStudentAccountBean" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/beans/CreateStudentAccountBean.java" binary="false" label="&lt;static&gt;" 
+    type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="2">      
+      <position height="633" width="0" x="0" y="242"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="552" width="0" x="0" y="296"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="148" width="0" x="0" y="579"/>    
+    </execution>  
+  </object>  
+  <object id="21" language="java" name="java.security.SecureRandom" project="AdvisingScheduler" 
+    file="C:/Program Files/Java/jre1.8.0_73/lib/rt.jar" binary="true" label="rnd" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="18">      
+      <position height="27" width="0" x="0" y="619"/>    
+    </execution>    
+    <execution id="20">      
+      <position height="27" width="0" x="0" y="673"/>    
+    </execution>  
+  </object>  
+  <object id="22" language="java" name="uta.cse4361.databases.DatabaseManager" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/databases/DatabaseManager.java" binary="false" label="dm" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="0" x="0" y="336"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="27" width="0" x="0" y="390"/>    
+    </execution>    
+    <execution id="16">      
+      <position height="27" width="0" x="0" y="794"/>    
+    </execution>  
+  </object>  
+  <object id="23" language="java" name="uta.cse4361.businessobjects.StudentAccount" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/businessobjects/StudentAccount.java" binary="false" label="SA" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="10">      
+      <position height="27" width="0" x="0" y="444"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="27" width="0" x="0" y="740"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="Student():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="DatabaseManager()" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="getStudentAccount(java.lang.String):uta.cse4361.businessobjects.StudentAccount" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="StudentAccount()" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="createTempPassword():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" 
+    operation="initialize(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int):boolean" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="15" operation="registerStudent(uta.cse4361.businessobjects.StudentAccount):java.lang.String" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="17" operation="SecureRandom()" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" operation="nextInt(int):int" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>
+</sequence-diagram>

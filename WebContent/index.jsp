@@ -20,9 +20,9 @@ and open the template in the editor.
 
     <body>
 
-        <jsp:include page='navigationbar.jsp' />
+        <jsp:include page='jsp/navigationbar.jsp' />
         <div id='wrapper'>
-            <jsp:include page='header.jsp' />
+            <jsp:include page='jsp/header.jsp' />
              <% 
                             int rank = -1;
                             int sessionid = -1;
@@ -98,7 +98,7 @@ and open the template in the editor.
         </div>
 
     </body>
-    <jsp:include page='footer.jsp' />
+    <jsp:include page='jsp/footer.jsp' />
 
     <script type='text/javascript' src='js/index.js'></script>
 </html>
