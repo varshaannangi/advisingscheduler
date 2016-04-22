@@ -81,7 +81,8 @@
           <ul class="dropdown-menu" style="text-align: center">
               <li><a href="https://sis-portal-prod.uta.edu/psp/AEPPRD/EMPLOYEE/EMPL/h/?tab=PAPP_GUEST"> My Mav</a></li><br>
               <li><a href="http://www.uta.edu/uta/"> UTA </a></li><br>
-              <li><a href="http://www.uta.edu/uta/academics/colleges.php">Departments</a></li>
+              <li><a href="http://www.uta.edu/uta/academics/colleges.php">Departments</a></li><br>
+              <li><a href="https://www.uta.edu/uta/acadcal.php">Academic Calendar</a></li>              
           </ul>
         </li>
         <form>
