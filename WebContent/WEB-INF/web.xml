@@ -9,9 +9,15 @@
             30
         </session-timeout>
     </session-config>
-    
         
     <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+    <resource-ref>
+    <description>javax.mail.Session mail reference</description>
+    <res-ref-name>mail/MailServer</res-ref-name>
+    <res-type>javax.mail.Session</res-type>
+    <res-auth>Container</res-auth>
+    <res-sharing-scope>Shareable</res-sharing-scope>
+  </resource-ref>
 </web-app>

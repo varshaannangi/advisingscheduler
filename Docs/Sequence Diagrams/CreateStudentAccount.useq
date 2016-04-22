@@ -11,20 +11,10 @@
       <position height="552" width="0" x="0" y="296"/>    
     </execution>    
     <execution id="12">      
-      <position height="148" width="0" x="0" y="579"/>    
+      <position height="27" width="0" x="0" y="579"/>    
     </execution>  
   </object>  
-  <object id="21" language="java" name="java.security.SecureRandom" project="AdvisingScheduler" 
-    file="C:/Program Files/Java/jre1.8.0_73/lib/rt.jar" binary="true" label="rnd" type="class" autoSize="true">    
-    <position height="0" width="0" x="0" y="0"/>    
-    <execution id="18">      
-      <position height="27" width="0" x="0" y="619"/>    
-    </execution>    
-    <execution id="20">      
-      <position height="27" width="0" x="0" y="673"/>    
-    </execution>  
-  </object>  
-  <object id="22" language="java" name="uta.cse4361.databases.DatabaseManager" project="AdvisingScheduler" 
+  <object id="17" language="java" name="uta.cse4361.databases.DatabaseManager" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/databases/DatabaseManager.java" binary="false" label="dm" type="class" 
     autoSize="true">    
     <position height="0" width="0" x="0" y="0"/>    
@@ -38,7 +28,7 @@
       <position height="27" width="0" x="0" y="794"/>    
     </execution>  
   </object>  
-  <object id="23" language="java" name="uta.cse4361.businessobjects.StudentAccount" project="AdvisingScheduler" 
+  <object id="18" language="java" name="uta.cse4361.businessobjects.StudentAccount" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/businessobjects/StudentAccount.java" binary="false" label="SA" type="class" 
     autoSize="true">    
     <position height="0" width="0" x="0" y="0"/>    
@@ -80,13 +70,5 @@
     asynchronous="false">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="16"/>  
-  </message>  
-  <message id="17" operation="SecureRandom()" asynchronous="false">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="18"/>  
-  </message>  
-  <message id="19" operation="nextInt(int):int" asynchronous="false">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="20"/>  
   </message>
 </sequence-diagram>

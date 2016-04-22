@@ -64,6 +64,7 @@
             <div class="centerthis">
                 <form role="form" name="ChangePassword" action="ChangePasswordValidation.jsp" onSubmit="return validate();" >
                     <div class="form-group">
+                    	<input type="hidden" id="u" name="u" value="<%= request.getParameter("u") %>">                    
                         <label for="newPassword">New Password</label>
                         <input type="password" name="newPassword" id="newPassword" value="" class="form-control">
                     </div>

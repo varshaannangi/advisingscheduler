@@ -32,44 +32,30 @@
     <execution id="18">      
       <position height="27" width="0" x="0" y="522"/>    
     </execution>    
-    <execution id="26">      
+    <execution id="22">      
       <position height="27" width="0" x="0" y="751"/>    
     </execution>    
-    <execution id="32">      
+    <execution id="26">      
       <position height="27" width="0" x="0" y="926"/>    
     </execution>  
   </object>  
-  <object id="33" language="java" name="java.util.ArrayList" project="AdvisingScheduler" 
-    file="C:/Program Files/Java/jre1.8.0_73/lib/rt.jar" binary="true" label="flyweightsToReturn" type="class" 
-    autoSize="true">    
-    <position height="0" width="0" x="0" y="0"/>    
-    <execution id="20">      
-      <position height="27" width="0" x="0" y="562"/>    
-    </execution>    
-    <execution id="22">      
-      <position height="27" width="0" x="0" y="616"/>    
-    </execution>    
-    <execution id="28">      
-      <position height="27" width="0" x="0" y="791"/>    
-    </execution>  
-  </object>  
-  <object id="34" language="java" name="uta.cse4361.businessobjects.AppointmentSlot" project="AdvisingScheduler" 
+  <object id="27" language="java" name="uta.cse4361.businessobjects.AppointmentSlot" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/businessobjects/AppointmentSlot.java" binary="false" type="class" 
     autoSize="true">    
     <position height="0" width="0" x="0" y="0"/>    
-    <execution id="24">      
+    <execution id="20">      
       <position height="27" width="0" x="0" y="670"/>    
     </execution>  
   </object>  
-  <object id="35" language="java" name="uta.cse4361.businessobjects.AvailableSlot" project="AdvisingScheduler" 
+  <object id="28" language="java" name="uta.cse4361.businessobjects.AvailableSlot" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/businessobjects/AvailableSlot.java" binary="false" type="class" 
     autoSize="true">    
     <position height="0" width="0" x="0" y="0"/>    
-    <execution id="30">      
+    <execution id="24">      
       <position height="27" width="0" x="0" y="845"/>    
     </execution>  
   </object>  
-  <object id="36" language="java" name="uta.cse4361.databases.DatabaseManager" project="AdvisingScheduler" 
+  <object id="29" language="java" name="uta.cse4361.databases.DatabaseManager" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/databases/DatabaseManager.java" binary="false" label="databaseManager" 
     type="class" autoSize="true">    
     <position height="0" width="0" x="0" y="0"/>    
@@ -111,32 +97,20 @@
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="18"/>  
   </message>  
-  <message id="19" operation="ArrayList()" asynchronous="false">    
+  <message id="19" operation="AppointmentSlot(int,java.util.Date,int,int)" asynchronous="false">    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="20"/>  
   </message>  
-  <message id="21" operation="add(E):boolean" asynchronous="false">    
+  <message id="21" operation="updateTimes():void" asynchronous="false">    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="22"/>  
   </message>  
-  <message id="23" operation="AppointmentSlot(int,java.util.Date,int,int)" asynchronous="false">    
+  <message id="23" operation="AvailableSlot(java.util.Date,int,int,int)" asynchronous="false">    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="24"/>  
   </message>  
   <message id="25" operation="updateTimes():void" asynchronous="false">    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="26"/>  
-  </message>  
-  <message id="27" operation="add(E):boolean" asynchronous="false">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="28"/>  
-  </message>  
-  <message id="29" operation="AvailableSlot(java.util.Date,int,int,int)" asynchronous="false">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="30"/>  
-  </message>  
-  <message id="31" operation="updateTimes():void" asynchronous="false">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="32"/>  
   </message>
 </sequence-diagram>

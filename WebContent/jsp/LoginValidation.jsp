@@ -19,7 +19,7 @@
         <div id="wrapper">
             <jsp:include page="header.jsp" />
             <div id="accordion">
-                <h3>Login Validation</h3>
+                <h3>Forgot Password</h3>
                 <div>
 
                     <%

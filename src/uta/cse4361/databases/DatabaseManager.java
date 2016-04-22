@@ -112,6 +112,10 @@ public class DatabaseManager {
         return imp.getStudentAccount(email);
     }
     
+    public <T> T getAnyAccount(String email){
+    	return (T) imp.getAnyAccount(email);
+    }
+    
      public String saveBugReport(String report){
         return imp.saveBugReport(report);
     }

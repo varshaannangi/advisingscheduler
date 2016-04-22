@@ -166,6 +166,14 @@ public class RelationalDatabaseImpl implements DatabaseImpInterface{
         getAccount.execute();
         return (AdvisorAccount)getAccount.getResult();
     }
+    
+    @Override
+    public Object  getAnyAccount(String email){
+        RDBImplCommand getAccount = new GetAnyUser(email);
+        getAccount.execute();        
+        return getAccount.getResult();
+    }
+    
     @Override
     public StudentAccount getStudentAccount(String email){
         RDBImplCommand getAccount = new GetAnyUser(email);

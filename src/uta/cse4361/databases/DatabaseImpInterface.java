@@ -32,6 +32,7 @@ public interface DatabaseImpInterface {
     public String validate(String email, String password);
     public AdvisorAccount getAccount(String email);
     public StudentAccount getStudentAccount(String email);
+    public Object getAnyAccount(String email);
     public String saveBugReport(String report);
     public String saveFeedback(String feedback);
     public String deleteUser(String email);
