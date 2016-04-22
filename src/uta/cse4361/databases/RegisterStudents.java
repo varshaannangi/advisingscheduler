@@ -17,7 +17,7 @@ public class RegisterStudents extends RDBImplCommand{
     
     private StudentAccount sa;
     private String sqlQuery = "INSERT INTO USER(UserEmail, UserPassword,"
-            + " UserName, UserDepartment, UserRank, TimeStamp) VALUES (?, ?, ?, ?, ?, ?)";
+            + " UserName, UserDepartment, UserRank, TimeStamp, SecurityQuestion, SecurityAnswer) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     public RegisterStudents(StudentAccount sa){
         this.sa = sa;
     }
@@ -32,6 +32,8 @@ public class RegisterStudents extends RDBImplCommand{
             statement.setString(4, sa.getMajor());
             statement.setInt(5, sa.getRank());
             statement.setTimestamp(6,new Timestamp(new java.util.Date().getTime()));
+            statement.setString(7, sa.getSecurityQuestion());
+            statement.setString(8, sa.getSecurityAnswer());
             statement.executeUpdate();
             processResult();
         }

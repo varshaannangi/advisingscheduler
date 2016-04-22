@@ -10,13 +10,15 @@
 <html>
     <head>
         <jsp:useBean id="newstudent" class="uta.cse4361.beans.CreateStudentAccountBean"/> 
-        <jsp:setProperty name="newstudent" property="email" value="<%=request.getParameter("email")%>" />
-        <jsp:setProperty name="newstudent" property="username" value="<%=request.getParameter("username")%>" />
-        <jsp:setProperty name="newstudent" property="tempPassword" value="<%=request.getParameter("password")%>" />
-        <jsp:setProperty name="newstudent" property="tempPasswordString" value="<%=request.getParameter("tempPasswordString")%>" />
-        <jsp:setProperty name="newstudent" property="major" value="<%=request.getParameter("major")%>" />
-        <jsp:setProperty name="newstudent" property="name" value="<%=request.getParameter("name")%>" />
-        <jsp:setProperty name="newstudent" property="rank" value="<%=Integer.parseInt("9")%>" />
+        <jsp:setProperty name="newstudent" property="email" value='<%=request.getParameter("email")%>' />
+        <jsp:setProperty name="newstudent" property="username" value='<%=request.getParameter("username")%>' />
+        <jsp:setProperty name="newstudent" property="tempPassword" value='<%=request.getParameter("password")%>'/>
+        <jsp:setProperty name="newstudent" property="tempPasswordString" value='<%=request.getParameter("tempPasswordString")%>' />
+        <jsp:setProperty name="newstudent" property="major" value='<%=request.getParameter("major")%>' />
+        <jsp:setProperty name="newstudent" property="name" value='<%=request.getParameter("name")%>' />
+        <jsp:setProperty name="newstudent" property="rank" value='<%=Integer.parseInt("9")%>' />
+        <jsp:setProperty name="newstudent" property="securityQuestion" value='<%=request.getParameter("securityQuestion") %>' />
+        <jsp:setProperty name="newstudent" property="securityAnswer" value='<%=request.getParameter("securityAnswer") %>' />
         
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Register Confirmation</title>

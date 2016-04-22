@@ -31,7 +31,7 @@ public class ChangePassword extends RDBImplCommand{
     public void queryDB() throws SQLException {
         try{
            
-            System.out.println("Inide change Password Db");
+            System.out.println("Inside change Password Db");
             statement = conn.prepareStatement(sqlQuery);
             statement.setString(1, password);
             statement.setInt(2, 2); // Set as Student

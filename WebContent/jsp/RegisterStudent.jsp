@@ -31,6 +31,7 @@
                 var studentID = document.forms["RegisterStudent"]["studentID"].value;
                 var name = document.forms["RegisterStudent"]["name"].value;
                 var username = document.forms["RegisterStudent"]["username"].value;
+                var securityAnswer = document.forms["RegisterStudent"]["securityAnswer"].value;
                 var email = document.forms["RegisterStudent"]["email"].value;
                 var atpos = email.indexOf("@");
                 var dotpos = email.lastIndexOf(".");
@@ -104,6 +105,14 @@
                     document.forms["RegisterStudent"]["username"].focus();
                     return false;
                 }
+                
+                if (securityAnswer === null || securityAnswer === "") {
+                    $("#securityAnswer").notify("Please enter answer for security question", "error",
+                            {elementPosition: 'bottom center',
+                                globalPosition: 'bottom center'})
+                    document.forms["RegisterStudent"]["securityAnswer"].focus();
+                    return false;
+                }
             }
         </script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -142,6 +151,19 @@
                             <option value="CPE">CPE</option>
                             <option value="Undecided">Undecided</option>
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="securityQuestion">Security Question</label>
+                        <select name="securityQuestion" id="securityQuestion" class="form-control" >
+                            <option value="What was your childhood nickname?">What was your childhood nickname?</option>
+                            <option value="What is the name of your favorite childhood friend?">What is the name of your favorite childhood friend?</option>
+                            <option value="What is your favorite movie?">What is your favorite movie?</option>
+                            <option value="What school did you attend for sixth grade?">What school did you attend for sixth grade?</option>
+                        </select>
+                    </div>
+                     <div class="form-group">
+                        <label for="securityAnswer">Security Question</label>
+                        <input type="text" name="securityAnswer" id="securityAnswer" value="" class="form-control">                        
                     </div>
                     <input type="submit" value="Register" id="registerBtn" class="btn btn-default">
                 </form>

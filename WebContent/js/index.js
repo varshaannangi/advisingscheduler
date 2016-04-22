@@ -1,6 +1,9 @@
 //$("#scheduleBtn").button();
 //$("#loginBtn").button().click(function(){});
-$("#loginBtn").on('click', function() {
+$("#loginBtn")
+		.on(
+				'click',
+				function() {
 					bootbox
 							.dialog({
 								title : "Login",
@@ -21,7 +24,9 @@ $("#loginBtn").on('click', function() {
 										label : "Login",
 										className : "btn-primary",
 										callback : function() {
-											document.getElementById("loginform").submit();
+											document
+													.getElementById("loginform")
+													.submit();
 										}
 									},
 
@@ -46,19 +51,34 @@ $("#rightAccordion").accordion({
 // $("#scheduleBtn").button().click(function(){});
 
 function forgotPassword() {
-	bootbox.dialog({
+	bootbox
+			.dialog({
 				title : "Forgot Password",
-				message : "<form role='form' id='forgotPasswordform' method='POST' action='ForgotPasswordLink.jsp' onsubmit='return validate()'>"
+				message : "<form role='form' id='forgotPasswordform' method='POST' action='ForgotPassword.jsp' onsubmit='return validate()'>"
 						+ "<div class='form-group'>"
 						+ "<label for='username'>Mavs Email</label>"
 						+ "<input class='form-control' type='text' name='username' id='username' value=''>"
+						+ "</div>"
+						+ "<div class='form-group'>"
+						+ "<label for='securityQuestion'>Security Question</label>"
+						+ "<select name='securityQuestion' id='securityQuestion' class='form-control' >"
+						+ "<option value='What was your childhood nickname?'>What was your childhood nickname?</option>"
+						+ "<option value='What is the name of your favorite childhood friend?'>What is the name of your favorite childhood friend?</option>"
+						+ "<option value='What is your favorite movie?'>What is your favorite movie?</option>"
+						+ "<option value='What school did you attend for sixth grade?'>What school did you attend for sixth grade?</option>"
+						+ "</select>"
+						+ " </div>"
+						+ "<div class='form-group'>"
+						+ "<label for='securityAnswer'>Security Question</label>"
+						+ "<input type='text' name='securityAnswer' id='securityAnswer' value='' class='form-control'>"
 						+ "</div>",
 				buttons : {
 					success : {
 						label : "Retrieve Password",
 						className : "btn-primary",
 						callback : function() {
-							document.getElementById("forgotPasswordform").submit();
+							document.getElementById("forgotPasswordform")
+									.submit();
 						}
 					}
 				}

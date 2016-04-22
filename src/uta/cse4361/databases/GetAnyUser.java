@@ -46,6 +46,8 @@ public class GetAnyUser extends RDBImplCommand{
                 String department = resultSet.getString("UserDepartment");
                 int ID = resultSet.getInt("UserID");
                 int rank = resultSet.getInt("UserRank");
+                String securityQuestion = resultSet.getString("SecurityQuestion");
+                String securityAnswer = resultSet.getString("SecurityAnswer");
                 Timestamp timeStamp = resultSet.getTimestamp("TimeStamp");
                 if(rank == 0)
                 {
@@ -55,7 +57,7 @@ public class GetAnyUser extends RDBImplCommand{
                 else if(rank == 2 || rank == 9)
                 {
                     result = new StudentAccount();
-                    ((StudentAccount)result).initialize(name, email, department, ID, rank, timeStamp);
+                    ((StudentAccount)result).initialize(name, email, department, ID, rank, securityQuestion, securityAnswer, timeStamp);
                 }
             }
             else{

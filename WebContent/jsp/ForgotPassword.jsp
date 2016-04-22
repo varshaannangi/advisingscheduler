@@ -13,6 +13,8 @@
 <jsp:useBean id="login" class="uta.cse4361.beans.LogInBean" />
 <jsp:setProperty name="login" property="email"
 	value='<%=request.getParameter("username")%>' />
+	<jsp:setProperty name="login" property="securityQuestion" value='<%=request.getParameter("securityQuestion") %>' />
+        <jsp:setProperty name="login" property="securityAnswer" value='<%=request.getParameter("securityAnswer") %>' />
 </head>
 <body>
 	<jsp:include page="navigationbar.jsp" />
@@ -23,11 +25,12 @@
 			<div>
 				<%
 					String result = login.ForgotPassword();
-					if (result.equals("Incorrect")) {
-						out.print("Incorrect username");
-					} else {
+					if (result.equals("")) {
 						out.print("We have sent a link to your email to reset password.");
 						response.sendRedirect("index.jsp");
+						
+					} else {
+						out.print(result);
 					}
 				%>
 			</div>

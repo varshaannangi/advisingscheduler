@@ -12,9 +12,9 @@
         <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login</title>
-        <jsp:useBean id="changePassword" class="uta.cse4361.beans.ChangePasswordBean"/>         
-         <jsp:setProperty name="changePassword" property="email" value='<%= request.getParameter("u")!=null ? request.getParameter("u"): (String)session.getAttribute("email")%>' />
-        <jsp:setProperty name="changePassword" property="newPassword" value='<%=request.getParameter("newPassword")%>' />
+        <jsp:useBean id="changePassword" class="uta.cse4361.beans.ChangePasswordBean"/>  
+        <jsp:setProperty name="changePassword" property="email" value='<%= request.getParameter("u")!=null ? request.getParameter("u"): (String)session.getAttribute("email")%>' />
+        <jsp:setProperty name="changePassword" property="newPassword" value='<%=request.getParameter("newPassword")%>' />                
     </head>
 <body>
          <jsp:include page="navigationbar.jsp" />

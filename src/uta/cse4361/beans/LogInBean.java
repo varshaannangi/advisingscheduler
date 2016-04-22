@@ -20,6 +20,8 @@ import uta.cse4361.interfaces.Constants;
 public class LogInBean implements Constants {
 	private String email = null;
 	private String password = null;
+	private String securityQuestion = null;
+	private String securityAnswer = null;
 
 	public LogInBean() {
 	}
@@ -53,10 +55,19 @@ public class LogInBean implements Constants {
 			Msg = "Incorrect";
 			return Msg;
 		}
-		String link = "http://localhost:8080/AdvisingScheduler/ChangePassword.jsp?u=" + email;
-		Email emailClient = new Email();
-		emailClient.sendSimpleEmail(email, "Reset password",
-				"Please click the below link to reset your password,\n" + link);
+		StudentAccount sa = dm.getStudentAccount(email);
+		if(sa.getSecurityQuestion().equals(securityQuestion)&& sa.getSecurityAnswer().equals(securityAnswer))
+		{
+			String link = "http://localhost:8080/AdvisingScheduler/ChangePassword.jsp?u=" + email;
+			Email emailClient = new Email();
+			emailClient.sendSimpleEmail(email, "Reset password",
+					"Please click the below link to reset your password,\n" + link);
+		}
+		else
+		{
+			Msg = "Incorrect details provided. Please check the details and try again";
+		}
+		
 		return Msg;
 	}
 
@@ -75,5 +86,22 @@ public class LogInBean implements Constants {
 	public void setPassword(String password) {
 		this.password = AdvisorAccount.hashPassword(password);
 	}
+	
+	public String getSecurityQuestion() {
+		return securityQuestion;
+	}
+
+	public void setSecurityQuestion(String securityQuestion) {
+		this.securityQuestion = securityQuestion;
+	}
+
+	public String getSecurityAnswer() {
+		return securityAnswer;
+	}
+
+	public void setSecurityAnswer(String securityAnswer) {
+		this.securityAnswer = securityAnswer;
+	}
+
 
 }
