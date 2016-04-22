@@ -14,7 +14,7 @@
     <head>
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-
+		<script src='https://www.google.com/recaptcha/api.js'></script>
         <script type="text/javascript">
             function isNumberKey(evt)
             {
@@ -164,6 +164,9 @@
                      <div class="form-group">
                         <label for="securityAnswer">Security Question</label>
                         <input type="text" name="securityAnswer" id="securityAnswer" value="" class="form-control">                        
+                    </div>
+                    <div class="form-group">
+                    	<div class="g-recaptcha" data-sitekey="6LetEh4TAAAAAL5P56hE-dl_98DnfW1uC7sgqA3R"></div>
                     </div>
                     <input type="submit" value="Register" id="registerBtn" class="btn btn-default">
                 </form>
