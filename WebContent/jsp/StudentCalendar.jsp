@@ -24,7 +24,7 @@
             java.text.DateFormat format = new java.text.SimpleDateFormat("MM/dd/yyyy");
             java.util.Date newDate = format.parse(request.getParameter("date"));
             String type = "";
-            if(request.getParameter("otherType")!=null)
+            if(request.getParameter("otherType")!="" && request.getParameter("otherType")!=null )
             {
             	type = request.getParameter("otherType");
             }
@@ -157,6 +157,9 @@
 //                                                newAppt.sendEmail(newAppt.generateStudentMessage(), newAppt.getStudentEmail());
                                                 //newAppt.sendEmail(newAppt.generateAdvisorMessage(), );
                                                 response.sendRedirect("AppointmentDetails.jsp");
+                                            }
+                                            else if(result == "Mutiple appointments"){
+                                            	out.println("Cannot make more than 1 appointment in a day and 2 in a week.");
                                             }
                                             else{
                                                 out.println(result);

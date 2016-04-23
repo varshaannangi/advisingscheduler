@@ -159,9 +159,12 @@ function AdvisingType(){
                 var major = document.getElementById("major");
                 var advisor = document.getElementById("advisor");
                 <%dm = new DatabaseManager();
-			HashMap<String, ArrayList<User>> usersByRank = dm.getUsersByRank(1);%>
+			HashMap<String, ArrayList<User>> usersByRank = dm.getUsersByRank(0);%>
                   var departments = "<%=usersByRank.keySet()%>"
                   <%System.out.println(usersByRank.keySet());%>
+                  optionMajor = document.createElement('option');
+                  optionMajor.text = "Undecided";
+                  major.add(optionMajor, 0);  
                   <%for (String department : usersByRank.keySet()) {%>
                      var optionMajor = document.createElement('option');
                      optionMajor.text = "<%=department%>";
@@ -171,10 +174,7 @@ function AdvisingType(){
                         optionAdvisor.text = "<%=u.getName() + "," + u.getEmail()%>";
                         advisor.add(optionAdvisor, 0);
                  <%}
-			}%>
-                 optionMajor = document.createElement('option');
-                 optionMajor.text = "Undecided";
-                 major.add(optionMajor, 0);    
+			}%>                  
              }   
         </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

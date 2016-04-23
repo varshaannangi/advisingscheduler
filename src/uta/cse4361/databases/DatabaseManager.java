@@ -130,7 +130,7 @@ public class DatabaseManager {
     }
      
     public HashMap<String, ArrayList<User>> getUsersByRank(int rank) {
-        return imp.getUsersByRank(1);
+        return imp.getUsersByRank(rank);
     }
     
     public String editAdvisorEmailSetting(String email, String setting)
