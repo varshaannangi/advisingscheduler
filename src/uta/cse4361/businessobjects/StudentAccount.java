@@ -5,6 +5,7 @@
  */
 package uta.cse4361.businessobjects;
 
+import java.io.InputStream;
 import java.sql.Timestamp;
 
 /**
@@ -218,5 +219,4 @@ public class StudentAccount {
 	public void setSecurityAnswer(String securityAnswer) {
 		this.securityAnswer = securityAnswer;
 	}
-
 }

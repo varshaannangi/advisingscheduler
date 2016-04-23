@@ -5,6 +5,7 @@
  */
 package uta.cse4361.databases;
 
+import java.io.InputStream;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import uta.cse4361.businessobjects.AdvisorAccount;
@@ -48,7 +49,7 @@ public class GetAnyUser extends RDBImplCommand{
                 int rank = resultSet.getInt("UserRank");
                 String securityQuestion = resultSet.getString("SecurityQuestion");
                 String securityAnswer = resultSet.getString("SecurityAnswer");
-                Timestamp timeStamp = resultSet.getTimestamp("TimeStamp");
+                Timestamp timeStamp = resultSet.getTimestamp("TimeStamp");                
                 if(rank == 0)
                 {
                     result = new AdvisorAccount();

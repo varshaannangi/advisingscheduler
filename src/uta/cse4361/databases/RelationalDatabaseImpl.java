@@ -216,5 +216,11 @@ public class RelationalDatabaseImpl implements DatabaseImpInterface{
        return (String)editEmailSetting.getResult();   
      }
      
+     @Override
+     public String updateUser(String email, String name, String major){
+    	 RDBImplCommand updateUser = new UpdateUser(email, name, major);
+    	 updateUser.execute();
+    	 return (String)updateUser.getResult();
+     }
     
 }

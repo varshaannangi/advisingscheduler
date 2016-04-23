@@ -137,4 +137,8 @@ public class DatabaseManager {
     {
         return imp.editAdvisorEmailSetting(email, setting);
     }
+    
+    public String updateUser(String email, String name, String major){
+    	return imp.updateUser(email, name, major);
+    }
 }
