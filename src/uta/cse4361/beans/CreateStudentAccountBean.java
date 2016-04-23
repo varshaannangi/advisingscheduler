@@ -22,6 +22,7 @@ public class CreateStudentAccountBean implements Constants {
 	private String email = null;
 	private int studentID = 0;
 	private String name = null;
+	private String phoneNumber = null;
 	private String username = null;
 	private String major = null;
 	private String tempPassword = null;
@@ -49,7 +50,7 @@ public class CreateStudentAccountBean implements Constants {
 				this.tempPassword = createTempPassword();
 			this.tempPasswordString = this.tempPassword;
 		}
-		boolean a = SA.initialize(this.name, this.tempPassword, this.email, this.username, this.major, this.securityQuestion, this.securityAnswer, this.rank);
+		boolean a = SA.initialize(this.name, this.tempPassword, this.email, this.username, this.phoneNumber, this.major, this.securityQuestion, this.securityAnswer, this.rank);
 		if (a == false)
 			return this.CREATE_STUDENT_FAIL;
 		returnMessage = dm.registerStudent(SA);
@@ -84,6 +85,14 @@ public class CreateStudentAccountBean implements Constants {
 	 */
 	public void setStudentID(int studentID) {
 		this.studentID = studentID;
+	}
+	
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	/**

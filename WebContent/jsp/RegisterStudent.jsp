@@ -11,11 +11,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-		<script src='https://www.google.com/recaptcha/api.js'></script>
-        <script type="text/javascript">
+<head>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script type="text/javascript">
             function isNumberKey(evt)
             {
                 var e = evt || window.event; //window.event is safer, thanks @ThiefMaster
@@ -115,65 +115,82 @@
                 }
             }
         </script>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Register Student</title>
-    </head>
-    <body>
-    <tr>
-        <jsp:include page="navigationbar.jsp" />
-    <div id="wrapper">
-        <jsp:include page="header.jsp" />
-        <div id="accordion" class="centerthis">
-            <h3>Register Student</h3>
-            <div class="centerthis">
-                <form role="form" name="RegisterStudent" action="RegisterStudentConfirmation.jsp" onSubmit="return validate();" >
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="text"  name="email" id="email" value="" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="studentID">Student ID</label>
-                        <input type="text" onkeypress="return isNumberKey(event)" name="studentID" id="studentID" value="" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Student Name</label>
-                        <input type="text" name="name" id="name" value="" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="username">User Name</label>
-                        <input type="text" name="username" id="username" value="" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="major">Major</label>
-                        <select name="major" id="major" class="form-control" >
-                            <option value="CSE">CSE</option>
-                            <option value="SE">SE</option>
-                            <option value="CPE">CPE</option>
-                            <option value="Undecided">Undecided</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="securityQuestion">Security Question</label>
-                        <select name="securityQuestion" id="securityQuestion" class="form-control" >
-                            <option value="What was your childhood nickname?">What was your childhood nickname?</option>
-                            <option value="What is the name of your favorite childhood friend?">What is the name of your favorite childhood friend?</option>
-                            <option value="What is your favorite movie?">What is your favorite movie?</option>
-                            <option value="What school did you attend for sixth grade?">What school did you attend for sixth grade?</option>
-                        </select>
-                    </div>
-                     <div class="form-group">
-                        <label for="securityAnswer">Security Question</label>
-                        <input type="text" name="securityAnswer" id="securityAnswer" value="" class="form-control">                        
-                    </div>
-                    <div class="form-group">
-                    	<div class="g-recaptcha" data-sitekey="6LetEh4TAAAAAL5P56hE-dl_98DnfW1uC7sgqA3R"></div>
-                    </div>
-                    <input type="submit" value="Register" id="registerBtn" class="btn btn-default">
-                </form>
-            </div>
-        </div>
-    </div>
-    <br>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Register Student</title>
+</head>
+<body>
+	<tr>
+		<jsp:include page="navigationbar.jsp" />
+		<div id="wrapper">
+			<jsp:include page="header.jsp" />
+			<div id="accordion" class="centerthis">
+				<h3>Register Student</h3>
+				<div class="centerthis">
+					<form role="form" name="RegisterStudent"
+						action="RegisterStudentConfirmation.jsp"
+						onSubmit="return validate();">
+						<div class="form-group">
+							<label for="email">Email</label> <input type="text" name="email"
+								id="email" value="" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="studentID">Student ID</label> <input type="text"
+								onkeypress="return isNumberKey(event)" name="studentID"
+								id="studentID" value="" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="phoneNumber">Phone Number</label> <input type="text"
+								onkeypress="return isNumberKey(event)" name="phoneNumber"
+								id="phoneNumber" value="" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="name">Student Name</label> <input type="text"
+								name="name" id="name" value="" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="username">User Name</label> <input type="text"
+								name="username" id="username" value="" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="major">Major</label> <select name="major" id="major"
+								class="form-control">
+								<option value="CSE">CSE</option>
+								<option value="SE">SE</option>
+								<option value="CPE">CPE</option>
+								<option value="Undecided">Undecided</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="securityQuestion">Security Question</label> <select
+								name="securityQuestion" id="securityQuestion"
+								class="form-control">
+								<option value="What was your childhood nickname?">What
+									was your childhood nickname?</option>
+								<option
+									value="What is the name of your favorite childhood friend?">What
+									is the name of your favorite childhood friend?</option>
+								<option value="What is your favorite movie?">What is
+									your favorite movie?</option>
+								<option value="What school did you attend for sixth grade?">What
+									school did you attend for sixth grade?</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="securityAnswer">Security Question</label> <input
+								type="text" name="securityAnswer" id="securityAnswer" value=""
+								class="form-control">
+						</div>
+						<div class="form-group">
+							<div class="g-recaptcha"
+								data-sitekey="6LetEh4TAAAAAL5P56hE-dl_98DnfW1uC7sgqA3R"></div>
+						</div>
+						<input type="submit" value="Register" id="registerBtn"
+							class="btn btn-default">
+					</form>
+				</div>
+			</div>
+		</div>
+		<br>
 </body>
 <jsp:include page="footer.jsp" />
 <script type="text/javascript" src="js/schedule.js"></script>

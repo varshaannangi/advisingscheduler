@@ -19,6 +19,7 @@ public class StudentAccount {
 	private String tempPassword = null;
 	private String tempPasswordString = null;
 	private String name = null;
+	private String phoneNumber = null;
 	private String username = null;
 	private String major = null;
 	private String securityQuestion = null;
@@ -30,12 +31,13 @@ public class StudentAccount {
 
 	}
 
-	public boolean initialize(String name, String email, String major, int ID, int rank, String securityQuestion, String securityAnswer, Timestamp timeStamp) {
+	public boolean initialize(String name, String email, String phoneNumber, String major, int ID, int rank, String securityQuestion, String securityAnswer, Timestamp timeStamp) {
 		boolean result = true;
 
 		if (name != null && !name.isEmpty() && email != null && !email.isEmpty() && major != null && !major.isEmpty()) {
 			this.name = name;
 			this.email = email;
+			this.phoneNumber = phoneNumber;
 			this.studentID = ID;
 			this.major = major;
 			this.rank = rank;
@@ -49,7 +51,7 @@ public class StudentAccount {
 		return result;
 	}
 
-	public boolean initialize(String name, String tempPassword, String email, String uname, String major,
+	public boolean initialize(String name, String tempPassword, String email, String uname, String phoneNumber, String major,
 			String securityQuestion, String securityAnswer, int rank) {
 		boolean result = true;
 
@@ -60,6 +62,7 @@ public class StudentAccount {
 			this.username = uname;
 			this.major = major;
 			this.rank = rank;
+			this.phoneNumber = phoneNumber;
 			this.tempPasswordString = tempPassword;
 			this.tempPassword = hashPassword(tempPassword);
 			this.securityQuestion = securityQuestion;
@@ -106,6 +109,14 @@ public class StudentAccount {
 		this.studentID = studentID;
 	}
 
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	
 	/**
 	 * @return the name
 	 */

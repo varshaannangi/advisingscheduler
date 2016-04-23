@@ -50,12 +50,12 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
         this.setDescription(dp);
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
-        cal.add(Calendar.HOUR, sH);
-        cal.add(Calendar.MINUTE, sM);
+        cal.set(Calendar.HOUR, sH);
+        cal.set(Calendar.MINUTE, sM);
         this.setDate(cal.getTime());
         this.setStartDateTime(cal.getTime());
-        cal.add(Calendar.HOUR, eH);
-        cal.add(Calendar.MINUTE, eM);
+        cal.set(Calendar.HOUR, eH);
+        cal.set(Calendar.MINUTE, eM);
         this.setEndDateTime(cal.getTime());
         this.setStartHour(sH);
         this.setEndHour(eH);
@@ -231,6 +231,10 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
         sb.append(getType());
         sb.append("\nDate=");
         sb.append(getDate());
+        sb.append("\nStart DateTime=");
+        sb.append(getStartDateTime());
+        sb.append("\nEnd DateTime=");
+        sb.append(getEndDateTime());
         sb.append("\nUID=");
         sb.append(getUID());
         sb.append("\nRequestType=");

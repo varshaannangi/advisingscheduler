@@ -17,6 +17,7 @@
         <jsp:setProperty name="newstudent" property="major" value='<%=request.getParameter("major")%>' />
         <jsp:setProperty name="newstudent" property="name" value='<%=request.getParameter("name")%>' />
         <jsp:setProperty name="newstudent" property="rank" value='<%=Integer.parseInt("9")%>' />
+        <jsp:setProperty name="newstudent" property="phoneNumber" value='<%=request.getParameter("phoneNumber")%>' />
         <jsp:setProperty name="newstudent" property="securityQuestion" value='<%=request.getParameter("securityQuestion") %>' />
         <jsp:setProperty name="newstudent" property="securityAnswer" value='<%=request.getParameter("securityAnswer") %>' />
         
