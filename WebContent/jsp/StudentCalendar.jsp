@@ -23,7 +23,15 @@
             
             java.text.DateFormat format = new java.text.SimpleDateFormat("MM/dd/yyyy");
             java.util.Date newDate = format.parse(request.getParameter("date"));
-            
+            String type = "";
+            if(request.getParameter("otherType")!=null)
+            {
+            	type = request.getParameter("otherType");
+            }
+            else
+            {
+            	type = request.getParameter("type");
+            }
             
             DatabaseManager dm = new DatabaseManager();
             java.util.ArrayList<uta.cse4361.businessobjects.Slot> fw = dm.getTypeSlots();
@@ -71,7 +79,7 @@
         <jsp:setProperty name="newAppt" property="studentName" param="sName" /> 
         <jsp:setProperty name="newAppt" property="studentMajor" param="major" /> 
         <jsp:setProperty name="newAppt" property="advisor" param="advisor" /> 
-        <jsp:setProperty name="newAppt" property="type" param="type" /> 
+        <jsp:setProperty name="newAppt" property="type" value='<%= type %>' /> 
         <jsp:setProperty name="newAppt" property="date" value='<%= newDate%>' /> 
         <jsp:setProperty name="newAppt" property="description" param="description" /> 
         <% if(timeSubmitted){ %>

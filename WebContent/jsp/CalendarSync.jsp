@@ -6,8 +6,8 @@
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.text.ParseException"%>
 <%@page contentType="text/calendar" pageEncoding="UTF-8"%>
-
 <%
+	response.setHeader("Content-Disposition", "attachment; filename=calendar.ics");
 	DatabaseManager dbm = new DatabaseManager();
 	StringBuffer sb = new StringBuffer();
 	ArrayList<Appointment> appointments = dbm.getAllUserAppointments(request.getParameter("u"));
@@ -22,7 +22,6 @@
 
 	for (Appointment appoint : appointments) {
 		UID uid = new UID();
-
 		String startTime = new SimpleDateFormat("yyyyMMdd'T'HHmmss").format(appoint.getStartDateTime());
 		String endTime = new SimpleDateFormat("yyyyMMdd'T'HHmmss").format(appoint.getEndDateTime());
 		sb.append("BEGIN:VEVENT\r\n" + "DTSTART;TZID=Central Standard Time:" + startTime + "00\r\n"
@@ -33,7 +32,5 @@
 				+ "DESCRIPTION:Reminder\r\n" + "END:VALARM\r\n" + "END:VEVENT\r\n");
 	}
 	sb.append("END:VCALENDAR");
-	System.out.println(sb);
-	response.setHeader("Content-Disposition", "attachment; filename=calendar.ics");
 	out.print(sb.toString());
 %>
