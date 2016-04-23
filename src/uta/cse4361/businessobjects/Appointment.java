@@ -28,6 +28,8 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
     private int endHour = 0;
     private int endMinute = 0;
     private Date date = null;
+    private Date startDateTime = null;
+    private Date endDateTime = null;
     private String uid = null;
     private String requestType = null;
     private String advisorEmail = null; 
@@ -51,6 +53,10 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
         cal.add(Calendar.HOUR, sH);
         cal.add(Calendar.MINUTE, sM);
         this.setDate(cal.getTime());
+        this.setStartDateTime(cal.getTime());
+        cal.add(Calendar.HOUR, eH);
+        cal.add(Calendar.MINUTE, eM);
+        this.setEndDateTime(cal.getTime());
         this.setStartHour(sH);
         this.setEndHour(eH);
         this.setStartMinute(sM);
@@ -118,6 +124,14 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
     public void setAdvisorEmail(String aEmail) { 
         this.advisorEmail = aEmail;
     }
+    public void setStartDateTime(Date startDateTime) { 
+        this.startDateTime = startDateTime;
+    }
+    
+    public void setEndDateTime(Date endDateTime) { 
+        this.endDateTime = endDateTime;
+    }
+    
     // Getters
     public String getStudentMajor() {
         return this.studentMajor;
@@ -168,6 +182,14 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
         return this.advisorEmail;
     }
 
+    public Date getStartDateTime() {
+        return this.startDateTime;
+    }
+    
+    public Date getEndDateTime() {
+        return this.endDateTime;
+    }
+    
     @Override
     public int compareTo(Appointment other) {
         Appointment toCompare = other;
