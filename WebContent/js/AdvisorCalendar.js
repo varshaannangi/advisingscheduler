@@ -1,10 +1,14 @@
 $("#allocateAccordion").accordion({heightStyle: "content"});
 $("#timeaccordion").accordion({heightStyle: "content"});
+$("#toolsAccordion").accordion({heightStyle: "content"});
 //$("#button").button();
 
 //Andrews code
 $(function () {
     $("#datepicker").datepicker({
+        minDate: 'today', 
+        maxDate: "+14D"});
+    $("#toolsdatepicker").datepicker({
         minDate: 'today', 
         maxDate: "+14D"});
 });
@@ -87,6 +91,12 @@ $(document).ready(function () {
         dayClick: function(date, event, view) {
         $('#datepicker').val(date.format('MM/DD/YYYY'));
         $('#datepicker').notify("Date" + " Selected", "success",
+        {
+//            elementPosition:'top center',
+            globalPosition:'top center'
+        })
+        $('#toolsdatepicker').val(date.format('MM/DD/YYYY'));
+        $('#toolsdatepicker').notify("Date" + " Selected", "success",
         {
 //            elementPosition:'top center',
             globalPosition:'top center'
