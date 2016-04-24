@@ -36,6 +36,8 @@
 					out.print("<li class='timeslot'>" + "<a href='modifyTimeslot.jsp' >Time slot</a>" + "</li>");
 					out.print(
 							"<li class='appointment'>" + "<a href='modifyAppointment.jsp' >Appointment</a>" + "</li>");
+					out.print("<li class='studentaccount'>" + "<a href='ChangeAvailability.jsp' >Change Availablity</a>"
+							+ "</li>");
 				}
 
 				if (rank == 2 || rank == 9) {
@@ -46,7 +48,8 @@
 							+ "<li><a href='CheckAppointments.jsp' >Check Appointments</a></li><br>"
 							+ "<li><a href='CalendarSync.jsp?u=" + email + "' >Calendar Sync</a></li>" + "</ul>"
 							+ "</li>");
-
+					out.print("<li class='studentaccount'>" + "<a href='AdvisorStatus.jsp' >Advisor Availablity</a>"
+							+ "</li>");
 					out.print("<li class='studentaccount'>" + "<a href='ChangePassword.jsp' >Change Password</a>"
 							+ "</li>");
 
@@ -86,7 +89,7 @@
 				<li><a href="https://www.uta.edu/uta/acadcal.php">Academic
 						Calendar</a></li>
 			</ul></li>
-		<form>
+		<!-- <form>
 			<input id="sbox" name="searchBox"
 				style="position: absolute; width: 140px; height: 32px; margin-top: -42px; margin-left: 370px;"
 				type="text" placeholder="Search"> <input
@@ -101,6 +104,6 @@
 					window.location.assign(z);
 				}
 			</script>
-		</form>
+		</form> -->
 	</ul>
 </div>

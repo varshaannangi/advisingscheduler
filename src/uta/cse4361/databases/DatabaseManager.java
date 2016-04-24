@@ -141,4 +141,12 @@ public class DatabaseManager {
     public String updateUser(String email, String name, String major){
     	return imp.updateUser(email, name, major);
     }
+    
+    public ArrayList<AdvisorAccount> getAdvisors(){
+    	return imp.getAdvisors();
+    }
+    
+    public String changeAdvisorStatus(String email, String status){
+    	return imp.changeAdvisorStatus(email, status);
+    }
 }

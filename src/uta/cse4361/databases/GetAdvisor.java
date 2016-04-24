@@ -44,8 +44,9 @@ public class GetAdvisor extends RDBImplCommand{
                 String department = resultSet.getString("UserDepartment");
                 int ID = resultSet.getInt("UserID");
                 int rank = resultSet.getInt("UserRank");
+                String status = resultSet.getString("Available");
                 result = new AdvisorAccount();
-                ((AdvisorAccount)result).initialize(name, email, department, ID, rank);
+                ((AdvisorAccount)result).initialize(name, email, department, ID, rank, status);
             }
             else{
                 result = null;

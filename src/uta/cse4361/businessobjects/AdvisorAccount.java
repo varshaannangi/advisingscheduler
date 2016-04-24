@@ -17,6 +17,7 @@ public class AdvisorAccount {
     private int ID;
     private String tempPassword;
     private int rank;
+    private String status;
     
     public AdvisorAccount(){
         
@@ -44,7 +45,7 @@ public class AdvisorAccount {
         return result;
     }
     
-    public boolean initialize(String name, String email, String department, int ID, int rank){
+    public boolean initialize(String name, String email, String department, int ID, int rank, String status){
         boolean result = true;
         
         if(name != null && !name.isEmpty() && 
@@ -55,6 +56,7 @@ public class AdvisorAccount {
             this.email = email;
             this.department = department;
             this.rank = rank;
+            this.status = status;
         }
         else
         {
@@ -94,6 +96,10 @@ public class AdvisorAccount {
         this.rank = rank;
     }
     
+    public void setRank(String status){
+        this.status = status;
+    }
+    
     public String getName(){
         return name;
     }
@@ -116,5 +122,9 @@ public class AdvisorAccount {
     
     public int getRank(){
         return rank;
+    }
+    
+    public String getStatus(){
+        return status;
     }
 }

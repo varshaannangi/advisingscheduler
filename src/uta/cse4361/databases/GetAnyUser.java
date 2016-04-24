@@ -50,11 +50,12 @@ public class GetAnyUser extends RDBImplCommand{
                 int rank = resultSet.getInt("UserRank");
                 String securityQuestion = resultSet.getString("SecurityQuestion");
                 String securityAnswer = resultSet.getString("SecurityAnswer");
-                Timestamp timeStamp = resultSet.getTimestamp("TimeStamp");                
+                Timestamp timeStamp = resultSet.getTimestamp("TimeStamp");
+                String status = resultSet.getString("Status");
                 if(rank == 0)
                 {
                     result = new AdvisorAccount();
-                    ((AdvisorAccount)result).initialize(name, email, department, ID, rank);
+                    ((AdvisorAccount)result).initialize(name, email, department, ID, rank, status);
                 }
                 else if(rank == 2 || rank == 9)
                 {

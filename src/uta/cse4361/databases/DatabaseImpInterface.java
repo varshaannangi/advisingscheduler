@@ -41,5 +41,7 @@ public interface DatabaseImpInterface {
     public String editAdvisorEmailSetting(String email, String setting);
     public String deleteStudentAppointment(int apptID);
     public String updateUser(String email, String name, String major);
+    public ArrayList<AdvisorAccount> getAdvisors();
+    public String changeAdvisorStatus(String email, String status);
 
 }

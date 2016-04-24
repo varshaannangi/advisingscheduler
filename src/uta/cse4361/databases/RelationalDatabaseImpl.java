@@ -222,5 +222,19 @@ public class RelationalDatabaseImpl implements DatabaseImpInterface{
     	 updateUser.execute();
     	 return (String)updateUser.getResult();
      }
+
+	@Override
+	public ArrayList<AdvisorAccount> getAdvisors() {
+		RDBImplCommand getAdvisors = new GetAdvisors();
+		getAdvisors.execute();		
+		return (ArrayList<AdvisorAccount>) getAdvisors.getResult();
+	}
+
+	@Override
+	public String changeAdvisorStatus(String email, String status) {
+		RDBImplCommand changeAdvisorStatus = new ChangeAdvisorStatus(email, status);
+		changeAdvisorStatus.execute();
+		return (String)changeAdvisorStatus.getResult();
+	}
     
 }
