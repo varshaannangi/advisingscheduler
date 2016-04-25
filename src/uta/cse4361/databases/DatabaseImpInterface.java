@@ -43,5 +43,7 @@ public interface DatabaseImpInterface {
     public String updateUser(String email, String name, String major);
     public ArrayList<AdvisorAccount> getAdvisors();
     public String changeAdvisorStatus(String email, String status);
+    public String addToWaitlist(Appointment appt);
+    public ArrayList<Appointment> getAllWaitlist();
 
 }

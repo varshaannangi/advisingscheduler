@@ -35,14 +35,20 @@
             
             DatabaseManager dm = new DatabaseManager();
             java.util.ArrayList<uta.cse4361.businessobjects.Slot> fw = dm.getTypeSlots();
-  
+            java.util.ArrayList<uta.cse4361.businessobjects.Slot> availableSlots = new java.util.ArrayList<uta.cse4361.businessobjects.Slot>();
            int fwsize= fw.size();
-          
-           
+                     
            StringBuilder sbAppt = new StringBuilder();
             for(int i=0;i<fwsize;i++) 
-                    sbAppt.append(fw.get(i).isAppointment()+",");        
-                   
+            {
+                    sbAppt.append(fw.get(i).isAppointment()+","); 
+                    if(!fw.get(i).isAppointment() && fw.get(i).getDate().equals(newDate))
+                    {
+                    	availableSlots.add(fw.get(i));
+                    }
+            }
+            
+            int available = availableSlots.size();       
            //Retrieve all the data into seperate parts
             StringBuilder sbDay = new StringBuilder();
             for(int i=0;i<fwsize;i++) 
@@ -65,8 +71,7 @@
                 sbYear.append((fw.get(i).getDate().getYear()+1900)+",");     
                   
            
-           String desc = request.getParameter("description");
-           
+           String desc = request.getParameter("description");          
            boolean timeSubmitted =  !(request.getParameter("startTime")==null || request.getParameter("startTime")=="");
         %>
         
@@ -149,6 +154,13 @@
                                         <textarea class="form-control" name="description" id="description" value="" readonly="readonly"></textarea>
                                         </div>
                                         <input type="submit" value="Make Appointment" id="submitBtn" class="btn btn-default">
+                                        <%if(available == 0) 
+                                        {
+                                        	%>
+                                        	 <div class="form-group">
+                                        	 </div>
+                                        <input type="submit" value="Add To Waitlist" name="waitlistBtn" id="waitlistBtn" class="btn btn-default">
+                                    <%} %>
                                     </form>
                                     <%if(timeSubmitted){
                                             String result = newAppt.scheduleAppointment(); 
@@ -164,7 +176,12 @@
                                             else{
                                                 out.println(result);
                                             }
-                                        }%>
+                                        }
+                                        else if(request.getParameter("waitlistBtn") != null){
+                                        String result = newAppt.addToWaitlist();
+                                        response.sendRedirect("Waitlist.jsp");
+                                        %>
+                                        <%} %>
                                 </div>                              
                         </div>
 

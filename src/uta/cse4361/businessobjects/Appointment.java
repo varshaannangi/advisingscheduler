@@ -68,6 +68,14 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
         return true;
     }
     
+    public void initialize(String sName, String sEmail, Date date) {
+    	this.setStudentName(sName);
+        this.setStudentEmail(sEmail);
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        this.setDate(cal.getTime());
+    }
+    
     // Setters
     public void setStudentMajor(String sMajor) {
         this.studentMajor = sMajor;

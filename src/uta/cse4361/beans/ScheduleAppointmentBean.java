@@ -78,6 +78,20 @@ public class ScheduleAppointmentBean implements Constants {
 		return msg;
 	}
 
+	public String addToWaitlist(){
+		String msg = SUCCESS_MESSAGE;
+		Appointment a = new Appointment();
+		boolean r = a.initialize(this.studentMajor, this.studentName, this.studentID, this.studentEmail,
+				this.advisorName, this.type, this.description, this.date, this.startHour, this.endHour,
+				this.startMinute, this.endMinute, Constants.EMAIL_REQUEST, this.advisorEmail, this.priority);
+		if (r == false) {
+			return this.INITIALIZE_APPOINTMENT_FAIL;
+		}
+		DatabaseManager dm = new DatabaseManager();
+		dm.addToWaitlist(a);
+		return msg;
+	}
+	
 	public String generateStudentMessage() {
 		String message = "";
 		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");

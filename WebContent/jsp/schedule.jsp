@@ -18,8 +18,8 @@
 
 <%
 	DatabaseManager dm = new DatabaseManager();
-	//            ArrayList<Date> availableDates = dm.getDatesForAvailability();
-	ArrayList<Slot> availableDates = dm.getAvailableSlots();
+	//ArrayList<Date> availableDates = dm.getDatesForAvailability();
+	ArrayList<Slot> availableDates = dm.getSlots();
 	ArrayList<String> availables = new ArrayList<String>();
 	for (Slot s : availableDates) {
 		int dd = s.getDate().getDate();
@@ -29,13 +29,12 @@
 		availables.add(newRecord);
 	}
 	StringBuilder sb = new StringBuilder();
-	for (int i = 0; i < availables.size(); i++) {
+	for (int i = 0; i < availables.size(); i++) 
 		sb.append(availables.get(i) + ",");
-	}
 %>
 
 <script type="text/javascript">
-            temp = "<%=sb.toString()%>";
+ temp = "<%=sb.toString()%>";
             var availableDates = new Array();
             availableDates = temp.split(',', '<%=availables.size()%>');
 

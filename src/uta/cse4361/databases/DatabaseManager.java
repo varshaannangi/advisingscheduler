@@ -149,4 +149,12 @@ public class DatabaseManager {
     public String changeAdvisorStatus(String email, String status){
     	return imp.changeAdvisorStatus(email, status);
     }
+    
+    public String addToWaitlist(Appointment appt){
+    	return imp.addToWaitlist(appt);
+    }
+    
+    public ArrayList<Appointment> getAllWaitlist(){
+    	return imp.getAllWaitlist();
+    }
 }

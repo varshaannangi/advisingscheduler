@@ -236,5 +236,19 @@ public class RelationalDatabaseImpl implements DatabaseImpInterface{
 		changeAdvisorStatus.execute();
 		return (String)changeAdvisorStatus.getResult();
 	}
+
+	@Override
+	public String addToWaitlist(Appointment appt) {
+		RDBImplCommand addToWaitlist = new AddToWaitlist(appt);
+		addToWaitlist.execute();
+		return (String)addToWaitlist.getResult();
+	}
+
+	@Override
+	public ArrayList<Appointment> getAllWaitlist() {
+		RDBImplCommand getAllWaitlist = new GetAllWaitlist();
+		getAllWaitlist.execute();
+		return (ArrayList<Appointment>)getAllWaitlist.getResult();
+	}
     
 }
