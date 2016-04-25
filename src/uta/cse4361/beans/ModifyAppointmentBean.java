@@ -32,6 +32,7 @@ public class ModifyAppointmentBean implements Constants
     private Date date = null;
     private boolean remove = false;
     private String advisorEmail;
+    private String priority = null;
 
     public ModifyAppointmentBean() {
 
@@ -53,7 +54,7 @@ public class ModifyAppointmentBean implements Constants
             result = appointment.initialize(this.studentMajor, this.studentName, this.studentId, this.studentEmail, 
                     this.advisorName, this.type, this.description, this.date, 
                     this.startHour, this.endHour, 
-                    this.startMinute, this.endMinute, Constants.EMAIL_REQUEST, this.advisorEmail);
+                    this.startMinute, this.endMinute, Constants.EMAIL_REQUEST, this.advisorEmail, this.priority);
             appointment.setApptID(apptID);
             if(result == false)
             {
@@ -116,6 +117,9 @@ public class ModifyAppointmentBean implements Constants
     public void setAdvisorEmail(String advisorEmail) {
         this.advisorEmail = advisorEmail;
     }
+    public void setPriority(String priority) { 
+        this.priority = priority;
+    }
     
     // Getters
     public boolean getRemove()
@@ -164,5 +168,8 @@ public class ModifyAppointmentBean implements Constants
     }
     public String getAdvisorEmail() {
         return this.advisorEmail;
+    }
+    public String getPriority() {
+        return this.priority;
     }
 }

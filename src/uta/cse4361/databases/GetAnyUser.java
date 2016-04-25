@@ -42,7 +42,7 @@ public class GetAnyUser extends RDBImplCommand{
         try{
             
             if(resultSet.next()){
-                String name = resultSet.getString("UserName");
+                String name = resultSet.getString("Name");
                 String email = resultSet.getString("UserEmail");
                 String phoneNumber = resultSet.getString("PhoneNumber");
                 String department = resultSet.getString("UserDepartment");

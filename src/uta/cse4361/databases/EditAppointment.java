@@ -19,7 +19,7 @@ public class EditAppointment extends RDBImplCommand{
     private String sqlQuery = "UPDATE APPOINTMENT SET ApptDate = ?, ApptStartHour = ?, ApptStartMin = ?, "
                                                         + "ApptEndHour = ?, ApptEndMin = ?, ApptType = ?, "
                                                         + "Description = ?, StudentID = ?, StudentName = ?, "
-                                                        + "StudentMajor = ?, StudentEmail = ?, AdvisorName = ?, AdvisorEmail = ?"
+                                                        + "StudentMajor = ?, StudentEmail = ?, AdvisorName = ?, AdvisorEmail = ?, Priority = ?"
                                                         + "WHERE ApptID = ?";
     
     
@@ -47,7 +47,8 @@ public class EditAppointment extends RDBImplCommand{
             statement.setString(11, appointment.getStudentEmail());
             statement.setString(12, appointment.getAdvisorName());
             statement.setString(13, appointment.getAdvisorEmail());
-            statement.setInt(14, id);
+            statement.setString(14, appointment.getPriority());
+            statement.setInt(15, id);
             statement.executeUpdate();
             processResult();
         } catch (SQLException e) {

@@ -32,14 +32,15 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
     private Date endDateTime = null;
     private String uid = null;
     private String requestType = null;
-    private String advisorEmail = null; 
+    private String advisorEmail = null;
+    private String priority = null;
 
     public Appointment() {
         UID uidTemp = new UID();
         this.setUID(uidTemp.toString());
     }
     
-    public boolean initialize(String sMajor, String sName, String sID, String sEmail, String aName, String type, String dp, Date date, int sH, int eH, int sM, int eM, String requestType, String aEmail) {
+    public boolean initialize(String sMajor, String sName, String sID, String sEmail, String aName, String type, String dp, Date date, int sH, int eH, int sM, int eM, String requestType, String aEmail, String priority) {
         this.setStudentMajor(sMajor);
         this.setStudentName(sName);
         this.setStudentEmail(sEmail);
@@ -63,6 +64,7 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
         this.setEndMinute(eM);
         this.setRequestType(requestType);
         this.setAdvisorEmail(aEmail);
+        this.priority = priority;
         return true;
     }
     
@@ -131,6 +133,9 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
     public void setEndDateTime(Date endDateTime) { 
         this.endDateTime = endDateTime;
     }
+    public void setPriority(String priority) { 
+        this.priority = priority;
+    }
     
     // Getters
     public String getStudentMajor() {
@@ -188,6 +193,10 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
     
     public Date getEndDateTime() {
         return this.endDateTime;
+    }
+    
+    public String getPriority() {
+        return this.priority;
     }
     
     @Override

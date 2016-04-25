@@ -87,7 +87,7 @@
         <jsp:setProperty name="newAppt" property="startMinute" value= '<%= getMin(request.getParameter("startTime")) %>'/>
         <jsp:setProperty name="newAppt" property="endHour" value= '<%= getHour(request.getParameter("endTime")) %>'/>
         <jsp:setProperty name="newAppt" property="endMinute" value= '<%= getMin(request.getParameter("endTime")) %>'/>
-        
+        <jsp:setProperty name="newAppt" property="priority" value= 'normal'/>
         <%}%>
         <title>Advising Calendar</title>
         <link rel='stylesheet' href='css/fullcalendar.css' />

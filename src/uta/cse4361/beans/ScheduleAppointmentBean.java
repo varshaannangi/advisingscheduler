@@ -38,6 +38,7 @@ public class ScheduleAppointmentBean implements Constants {
 	private Date date = null;
 	private String advisorEmail = null;
 	private String advisor = null;
+	private String priority = null;
 
 	public ScheduleAppointmentBean() {
 
@@ -48,7 +49,7 @@ public class ScheduleAppointmentBean implements Constants {
 		Appointment a = new Appointment();
 		boolean r = a.initialize(this.studentMajor, this.studentName, this.studentID, this.studentEmail,
 				this.advisorName, this.type, this.description, this.date, this.startHour, this.endHour,
-				this.startMinute, this.endMinute, Constants.EMAIL_REQUEST, this.advisorEmail);
+				this.startMinute, this.endMinute, Constants.EMAIL_REQUEST, this.advisorEmail, this.priority);
 		if (r == false) {
 			return this.INITIALIZE_APPOINTMENT_FAIL;
 		}
@@ -154,7 +155,11 @@ public class ScheduleAppointmentBean implements Constants {
 		setAdvisorEmail(a.substring(a.indexOf(",") + 1).trim());
 		advisor = a;
 	}
-
+	
+	public void setPriority(String priority) { 
+        this.priority = priority;
+    }
+	
 	// Getters
 	public String getStudentMajor() {
 		return this.studentMajor;
@@ -211,4 +216,7 @@ public class ScheduleAppointmentBean implements Constants {
 	public String getAdvisor() {
 		return this.advisor;
 	}
+	public String getPriority() {
+        return this.priority;
+    }
 }

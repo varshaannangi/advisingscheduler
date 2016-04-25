@@ -54,6 +54,7 @@
 
                                     <th>Advising Type</th>
                                      <th>Description</th>
+                                     <th>Priority</th>
                                     <th></th>
                                     </thead>
                                     <tbody>
@@ -61,7 +62,13 @@
                                     dm = new uta.cse4361.databases.DatabaseManager(); 
                                     java.util.ArrayList<uta.cse4361.businessobjects.Appointment> appts = dm.getAppointments(); 
                                     for(Appointment a: appts) {
-                                        out.print("<tr>");
+                                    	if(a.getPriority().equals("urgent"))
+                                    	{
+                                    		out.print("<tr style=\"background-color:red;\">");	
+                                    	}
+                                    	else{
+                                    		out.print("<tr>");	
+                                    	}                                        
                                         out.print("<td>");
                                         out.print(a.getDate().getMonth()+1+"/"+a.getDate().getDate()+"/"+(a.getDate().getYear()+1900));
                                         out.print("</td>");
@@ -95,6 +102,9 @@
                                         out.print("</td>");
                                         out.print("<td>");
                                         out.print(a.getDescription());
+                                        out.print("</td>");
+                                        out.print("<td>");
+                                        out.print(a.getPriority());
                                         out.print("</td>");
                                         out.print("<td>");
                                         out.print("<input type='radio' name='apptID' value='" +a.getApptID()+"'>");
