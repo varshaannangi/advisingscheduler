@@ -3,7 +3,7 @@
   realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="uta.cse4361.databases.DatabaseManager" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/databases/DatabaseManager.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1001" y="2185"/>    
+    <position height="-1" width="-1" x="1862" y="2385"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="uta.cse4361.beans.TimeAllocationBean" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/beans/TimeAllocationBean.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="436" width="236" x="352" y="1053"/>    
+    <position height="436" width="236" x="1101" y="1193"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="uta.cse4361.businessobjects.SlotFactory" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/businessobjects/SlotFactory.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="968" y="2753"/>    
+    <position height="-1" width="-1" x="1183" y="2233"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -31,7 +31,7 @@
   <class id="4" language="java" name="uta.cse4361.businessobjects.SlotFactory.AppointmentFlyweightFactoryHolder" 
     project="AdvisingScheduler" file="/AdvisingScheduler/src/uta/cse4361/businessobjects/SlotFactory.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="571" y="3028"/>    
+    <position height="-1" width="-1" x="830" y="2586"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -40,7 +40,7 @@
   </class>  
   <class id="5" language="java" name="uta.cse4361.businessobjects.AvailableSlot" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/businessobjects/AvailableSlot.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1280" y="3036"/>    
+    <position height="-1" width="-1" x="1201" y="2576"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -49,7 +49,7 @@
   </class>  
   <class id="6" language="java" name="uta.cse4361.businessobjects.AppointmentSlot" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/businessobjects/AppointmentSlot.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="954" y="3031"/>    
+    <position height="-1" width="-1" x="1494" y="2578"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -58,7 +58,7 @@
   </class>  
   <class id="7" language="java" name="uta.cse4361.beans.SaveBugReportBean" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/beans/SaveBugReportBean.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1753" y="1373"/>    
+    <position height="176" width="207" x="2274" y="1193"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -67,7 +67,7 @@
   </class>  
   <class id="8" language="java" name="uta.cse4361.beans.ChangePasswordBean" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/beans/ChangePasswordBean.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="216" width="232" x="990" y="1053"/>    
+    <position height="216" width="232" x="1398" y="1193"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -76,7 +76,7 @@
   </class>  
   <class id="9" language="java" name="uta.cse4361.beans.CreateAdvisorAccountBean" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/beans/CreateAdvisorAccountBean.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="456" width="267" x="45" y="1053"/>    
+    <position height="456" width="267" x="3111" y="1193"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -85,7 +85,7 @@
   </class>  
   <class id="10" language="java" name="uta.cse4361.businessobjects.AdvisorAccount" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/businessobjects/AdvisorAccount.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="463" y="2133"/>    
+    <position height="-1" width="-1" x="3247" y="2571"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -94,7 +94,7 @@
   </class>  
   <class id="11" language="java" name="uta.cse4361.beans.CreateStudentAccountBean" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/beans/CreateStudentAccountBean.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2072" y="1421"/>    
+    <position height="836" width="280" x="2791" y="1193"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -103,7 +103,7 @@
   </class>  
   <class id="12" language="java" name="uta.cse4361.businessobjects.StudentAccount" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/businessobjects/StudentAccount.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1866" y="2927"/>    
+    <position height="-1" width="-1" x="2529" y="2689"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -112,7 +112,7 @@
   </class>  
   <class id="13" language="java" name="uta.cse4361.beans.LogInBean" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/beans/LogInBean.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1449" y="1203"/>    
+    <position height="376" width="249" x="3418" y="1193"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -121,7 +121,7 @@
   </class>  
   <class id="14" language="java" name="uta.cse4361.beans.ModifyAppointmentBean" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/beans/ModifyAppointmentBean.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="996" width="241" x="2328" y="1053"/>    
+    <position height="-1" width="-1" x="458" y="1751"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -130,7 +130,7 @@
   </class>  
   <class id="15" language="java" name="uta.cse4361.businessobjects.Appointment" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/businessobjects/Appointment.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2647" y="3121"/>    
+    <position height="-1" width="-1" x="905" y="3364"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -139,7 +139,7 @@
   </class>  
   <class id="16" language="java" name="uta.cse4361.beans.ModifyTimeSlotsBean" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/beans/ModifyTimeSlotsBean.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="456" width="322" x="628" y="1053"/>    
+    <position height="456" width="322" x="1912" y="1193"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -148,7 +148,7 @@
   </class>  
   <class id="17" language="java" name="uta.cse4361.beans.ScheduleAppointmentBean" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/beans/ScheduleAppointmentBean.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2788" y="1525"/>    
+    <position height="-1" width="-1" x="171" y="1935"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -157,7 +157,7 @@
   </class>  
   <class id="18" language="java" name="uta.cse4361.businessobjects.Scheduler" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/businessobjects/Scheduler.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2232" y="2221"/>    
+    <position height="96" width="231" x="63" y="1193"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -166,7 +166,7 @@
   </class>  
   <class id="19" language="java" name="uta.cse4361.businessobjects.EmailManager" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/businessobjects/EmailManager.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1633" y="2137"/>    
+    <position height="-1" width="-1" x="196" y="2917"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -175,178 +175,215 @@
   </class>  
   <class id="20" language="java" name="uta.cse4361.beans.SaveFeedbackBean" project="AdvisingScheduler" 
     file="/AdvisingScheduler/src/uta/cse4361/beans/SaveFeedbackBean.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1735" y="1109"/>    
+    <position height="176" width="202" x="1670" y="1193"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
       <operations public="true" package="false" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <dependency id="21">    
-    <bendpoint x="2337" y="2089"/>    
-    <end type="SOURCE" refId="14"/>    
+  <class id="21" language="java" name="uta.cse4361.helpers.NotifyAppointment" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/helpers/NotifyAppointment.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="446" x="615" y="1193"/>    
+    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="false" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="uta.cse4361.beans.StudentProfileBean" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/beans/StudentProfileBean.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="276" width="230" x="2521" y="1193"/>    
+    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="false" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="23">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="24">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="18"/>  
+  </dependency>  
+  <dependency id="25">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="26">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="27">    
+    <bendpoint x="2670" y="2349"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="28">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <dependency id="29">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="30">    
+    <bendpoint x="1582" y="2349"/>    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <association id="31">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="32" name="INSTANCE">        
+        <position height="0" width="0" x="-236" y="-920"/>      
+      </attribute>      
+      <multiplicity id="33" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-236" y="-920"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="34">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="35">    
+    <bendpoint x="592" y="2349"/>    
+    <end type="SOURCE" refId="21"/>    
     <end type="TARGET" refId="15"/>  
   </dependency>  
-  <association id="22">    
+  <association id="36">    
     <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="23" name="databaseManager">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="37" name="databaseManager">        
+        <position height="0" width="0" x="-16" y="-292"/>      
       </attribute>      
-      <multiplicity id="24" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="38" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-16" y="-292"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="25">    
-    <bendpoint x="1956" y="2089"/>    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="12"/>  
-  </dependency>  
-  <dependency id="26">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="18"/>  
-  </dependency>  
-  <dependency id="27">    
-    <bendpoint x="592" y="2089"/>    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="10"/>  
-  </dependency>  
-  <dependency id="28">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="1"/>  
-  </dependency>  
-  <dependency id="29">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="1"/>  
-  </dependency>  
-  <dependency id="30">    
-    <bendpoint x="940" y="2089"/>    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <dependency id="31">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="1"/>  
-  </dependency>  
-  <dependency id="32">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="1"/>  
-  </dependency>  
-  <dependency id="33">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="1"/>  
-  </dependency>  
-  <association id="34">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="35" name="INSTANCE">        
-        <position height="0" width="0" x="-4" y="-160"/>      
-      </attribute>      
-      <multiplicity id="36" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-4" y="-160"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="37">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="15"/>  
-  </dependency>  
-  <dependency id="38">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="1"/>  
-  </dependency>  
   <dependency id="39">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="15"/>  
-  </dependency>  
-  <nesting id="40">    
     <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="4"/>  
-  </nesting>  
-  <association id="41">    
-    <bendpoint x="2068" y="2089"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <association id="40">    
+    <bendpoint x="416" y="2349"/>    
     <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="42" name="aff">        
-        <position height="0" width="0" x="-4" y="-160"/>      
+      <attribute id="41" name="appointment">        
+        <position height="0" width="0" x="118" y="-359"/>      
       </attribute>      
-      <multiplicity id="43" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-4" y="-160"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="44">    
-    <bendpoint x="1324" y="2089"/>    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="10"/>  
-  </dependency>  
-  <dependency id="45">    
-    <bendpoint x="2870" y="1053"/>    
-    <bendpoint x="2870" y="2089"/>    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="15"/>  
-  </dependency>  
-  <dependency id="46">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="12"/>  
-  </dependency>  
-  <association id="47">    
-    <bendpoint x="2721" y="2089"/>    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="48" name="appointment">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="49" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="42" minimum="0" maximum="1">        
+        <position height="0" width="0" x="118" y="-359"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="50">    
-    <end type="SOURCE" refId="1"/>    
+  <dependency id="43">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="44">    
+    <bendpoint x="1164" y="2349"/>    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="3"/>  
   </dependency>  
-  <dependency id="51">    
+  <dependency id="45">    
     <end type="SOURCE" refId="11"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
-  <dependency id="52">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="6"/>  
+  <dependency id="46">    
+    <bendpoint x="3273" y="2349"/>    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="10"/>  
   </dependency>  
-  <dependency id="53">    
+  <dependency id="47">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
-  <dependency id="54">    
+  <dependency id="48">    
+    <bendpoint x="2984" y="2349"/>    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="49">    
+    <bendpoint x="3120" y="2349"/>    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="50">    
+    <bendpoint x="32" y="1193"/>    
+    <bendpoint x="32" y="2349"/>    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <nesting id="51">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="4"/>  
+  </nesting>  
+  <dependency id="52">    
     <end type="SOURCE" refId="14"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
+  <dependency id="53">    
+    <bendpoint x="1367" y="1193"/>    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="54">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
   <dependency id="55">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="5"/>  
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="15"/>  
   </dependency>  
   <dependency id="56">    
     <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="10"/>  
+    <end type="TARGET" refId="15"/>  
   </dependency>  
   <dependency id="57">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="58">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="59">    
     <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
-  <dependency id="58">    
+  <dependency id="60">    
     <end type="SOURCE" refId="18"/>    
     <end type="TARGET" refId="19"/>  
   </dependency>  
-  <dependency id="59">    
-    <bendpoint x="1999" y="2089"/>    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="12"/>  
+  <dependency id="61">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <association id="62">    
+    <bendpoint x="571" y="2349"/>    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="63" name="aff">        
+        <position height="0" width="0" x="-236" y="-920"/>      
+      </attribute>      
+      <multiplicity id="64" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-236" y="-920"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="65">    
+    <bendpoint x="437" y="2349"/>    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="15"/>  
   </dependency>  
   <classifier-display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

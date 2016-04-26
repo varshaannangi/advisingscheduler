@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.9" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="uta.cse4361.helpers.NotifyAppointment" project="AdvisingScheduler" 
+    file="/AdvisingScheduler/src/uta/cse4361/helpers/NotifyAppointment.java" binary="false" label="notifyAppointment" 
+    type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="2">      
+      <position height="211" width="0" x="0" y="106"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="130" width="0" x="0" y="160"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="javax.mail.Transport" project="AdvisingScheduler" 
+    file="F:/Masters/Advanced SE/AdvisingScheduler/WebContent/WEB-INF/lib/mail-1.4.1.jar" binary="true" 
+    label="&lt;static&gt;" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="0" x="0" y="236"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="sendRemainder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="send(javax.mail.Message):void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>
+</sequence-diagram>
