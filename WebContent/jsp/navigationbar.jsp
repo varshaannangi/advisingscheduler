@@ -46,6 +46,7 @@
 							+ "<ul class='dropdown-menu'>"
 							+ "<li><a href='schedule.jsp' >Make an Appointment</a></li><br>"
 							+ "<li><a href='CheckAppointments.jsp' >Check Appointments</a></li><br>"
+							+ "<li><a href='Waitlist.jsp' >Waitlist</a></li><br>"
 							+ "<li><a href='CalendarSync.jsp?u=" + email + "' >Calendar Sync</a></li>" + "</ul>"
 							+ "</li>");
 					out.print("<li class='studentaccount'>" + "<a href='AdvisorStatus.jsp' >Advisor Availablity</a>"
