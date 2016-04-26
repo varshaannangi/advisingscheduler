@@ -8,12 +8,12 @@ About the application
 
 The Advising Scheduler is a Web application of UT Arlington which is rebuilt with some new requirements. Academic Advising is an opportunity to exchange information designed to help students reach their educational and career goals. Advising is a shared responsibility between an adviser and the student. Academic advisers can assist in this process by helping the student understand options, determine resources and, when necessary, identify alternatives by creating appointment slots, deleting appointment hours. Whereas students can manage their accounts, book an appointment, delete appointment etc.
 
-Softwares Used
+Softwares Used: ->
 	Eclipse Java EE Edition / NetBeans
-  Tomcat Server 7/ GlassFish
-  MySQL
+  	Tomcat Server 7/ GlassFish
+  	MySQL
 
-Setting Up
+Setting Up: ->
   Creating a Database Using MySQL 
 
   Making a Connection Using NetBeans/Eclipse
@@ -30,7 +30,7 @@ Setting Up
 
   Deploying and Running the Project
 
-Database Setup 
+Database Setup:-> 
   Open MySQL workbench
   Create new instance
   Provide username as "root" and password as "advising"
@@ -39,7 +39,7 @@ Database Setup
 
   Initialize DB instance
 
-Import Source code
+Import Source code :->
   Copy the URL from GitHub 
   Open Eclipse 
   Go to Menu → File → Import → Git → Projects from Git →URI
