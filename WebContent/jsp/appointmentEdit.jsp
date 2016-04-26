@@ -66,6 +66,7 @@
 						String studentName = appt.getStudentName();
 						String studentID = appt.getStudentID();
 						String priority = appt.getPriority();
+						String defaulted = appt.getDefaulted();
 
 						boolean descriptionSubmitted = !(request.getParameter("remove") == null
 								|| request.getParameter("remove") == "");
@@ -132,6 +133,22 @@
 						</select>
 					</div>
 					<div class="form-group">
+						<label for="default">Defaulted</label>
+						<%
+							if (defaulted.equals("yes")) {
+						%>
+						<input type="checkbox" name="defaulted" id="default" checked
+							class="form-control">
+						<%
+							} else {
+						%>
+						<input type="checkbox" name="defaulted" id="default"
+							class="form-control">
+						<%
+							}
+						%>
+					</div>
+					<div class="form-group">
 						<label for="description">Description</label>
 
 						<textarea class="form-control" name="description" id="description"
@@ -163,6 +180,8 @@
 					value='<%=appt.getApptID()%>' />
 				<jsp:setProperty name="mab" property="studentName"
 					value='<%=appt.getStudentName()%>' />
+					<jsp:setProperty name="mab" property="studentEmail"
+					value='<%=appt.getStudentEmail()%>' />
 				<jsp:setProperty name="mab" property="type"
 					value='<%=appt.getType()%>' />
 				<jsp:setProperty name="mab" property="studentId"
@@ -188,7 +207,9 @@
 				<jsp:setProperty name="mab" property="remove"
 					value='<%=Boolean.parseBoolean(request.getParameter("remove"))%>' />
 				<jsp:setProperty name="mab" property="priority"
-					value='<%=request.getParameter("priority")%>' />	
+					value='<%=request.getParameter("priority")%>' />
+				<jsp:setProperty name="mab" property="defaulted"
+					value='<%=request.getParameter("defaulted") != null ? "yes" : "on"%>' />
 				<%
 					String success = mab.scheduleAppointment();
 							if (success.equals("")) {

@@ -16,8 +16,8 @@ public class SaveAppointment extends RDBImplCommand {
 
     private Appointment appointment;
     private String sqlQuery = "INSERT INTO APPOINTMENT (ApptDate, ApptStartHour, ApptStartMin, ApptEndHour, ApptEndMin, "
-            + "ApptType, Description, StudentID, StudentName, StudentMajor, StudentEmail, AdvisorName, AdvisorEmail) "
-            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            + "ApptType, Description, StudentID, StudentName, StudentMajor, StudentEmail, AdvisorName, AdvisorEmail, Defaulted) "
+            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     public SaveAppointment(Appointment appt) {
         super();
@@ -41,6 +41,7 @@ public class SaveAppointment extends RDBImplCommand {
             statement.setString(11, appointment.getStudentEmail());
             statement.setString(12, appointment.getAdvisorName());
             statement.setString(13, appointment.getAdvisorEmail());
+            statement.setString(14, "no");
             statement.executeUpdate();
             //System.out.println("Insert Appointment: \n" + appointment.toString());
             processResult();

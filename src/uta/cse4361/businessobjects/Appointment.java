@@ -34,13 +34,14 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
     private String requestType = null;
     private String advisorEmail = null;
     private String priority = null;
+    private String defaulted = null;
 
     public Appointment() {
         UID uidTemp = new UID();
         this.setUID(uidTemp.toString());
     }
     
-    public boolean initialize(String sMajor, String sName, String sID, String sEmail, String aName, String type, String dp, Date date, int sH, int eH, int sM, int eM, String requestType, String aEmail, String priority) {
+    public boolean initialize(String sMajor, String sName, String sID, String sEmail, String aName, String type, String dp, Date date, int sH, int eH, int sM, int eM, String requestType, String aEmail, String priority, String defaulted) {
         this.setStudentMajor(sMajor);
         this.setStudentName(sName);
         this.setStudentEmail(sEmail);
@@ -65,6 +66,7 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
         this.setRequestType(requestType);
         this.setAdvisorEmail(aEmail);
         this.priority = priority;
+        this.defaulted = defaulted;
         return true;
     }
     
@@ -145,6 +147,10 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
         this.priority = priority;
     }
     
+    public void setDefaulted(String defaulted) { 
+        this.defaulted = defaulted;
+    }
+    
     // Getters
     public String getStudentMajor() {
         return this.studentMajor;
@@ -205,6 +211,10 @@ public class Appointment implements java.io.Serializable, Comparable<Appointment
     
     public String getPriority() {
         return this.priority;
+    }
+    
+    public String getDefaulted() {
+        return this.defaulted;
     }
     
     @Override

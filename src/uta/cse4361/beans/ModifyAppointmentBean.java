@@ -7,6 +7,7 @@ package uta.cse4361.beans;
 
 import java.util.Date;
 import uta.cse4361.businessobjects.Appointment;
+import uta.cse4361.businessobjects.Email;
 import uta.cse4361.businessobjects.EmailManager;
 import uta.cse4361.databases.DatabaseManager;
 import uta.cse4361.interfaces.Constants;
@@ -33,6 +34,7 @@ public class ModifyAppointmentBean implements Constants
     private boolean remove = false;
     private String advisorEmail;
     private String priority = null;
+    private String defaulted = null;
 
     public ModifyAppointmentBean() {
 
@@ -54,7 +56,7 @@ public class ModifyAppointmentBean implements Constants
             result = appointment.initialize(this.studentMajor, this.studentName, this.studentId, this.studentEmail, 
                     this.advisorName, this.type, this.description, this.date, 
                     this.startHour, this.endHour, 
-                    this.startMinute, this.endMinute, Constants.EMAIL_REQUEST, this.advisorEmail, this.priority);
+                    this.startMinute, this.endMinute, Constants.EMAIL_REQUEST, this.advisorEmail, this.priority, defaulted);
             appointment.setApptID(apptID);
             if(result == false)
             {
@@ -64,6 +66,11 @@ public class ModifyAppointmentBean implements Constants
         if (result == true)
         {
             returnMessage = databaseManager.modifyAppointment(this.apptID, appointment);
+            if(appointment.getDefaulted().equals("yes"))
+            {
+            	Email email = new Email();
+            	email.sendSimpleEmail(studentEmail, "You missed your appointment", "You have been levied $20 penality for missing your appointment." );
+            }
         }
         return returnMessage;
     }
@@ -120,6 +127,9 @@ public class ModifyAppointmentBean implements Constants
     public void setPriority(String priority) { 
         this.priority = priority;
     }
+    public void setDefaulted(String defaulted) { 
+        this.defaulted = defaulted;
+    }
     
     // Getters
     public boolean getRemove()
@@ -171,5 +181,8 @@ public class ModifyAppointmentBean implements Constants
     }
     public String getPriority() {
         return this.priority;
+    }
+    public String getDefaulted() {
+        return this.defaulted;
     }
 }

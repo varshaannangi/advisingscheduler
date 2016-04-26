@@ -39,6 +39,7 @@ public class ScheduleAppointmentBean implements Constants {
 	private String advisorEmail = null;
 	private String advisor = null;
 	private String priority = null;
+	private String defaulted = null;
 
 	public ScheduleAppointmentBean() {
 
@@ -49,7 +50,7 @@ public class ScheduleAppointmentBean implements Constants {
 		Appointment a = new Appointment();
 		boolean r = a.initialize(this.studentMajor, this.studentName, this.studentID, this.studentEmail,
 				this.advisorName, this.type, this.description, this.date, this.startHour, this.endHour,
-				this.startMinute, this.endMinute, Constants.EMAIL_REQUEST, this.advisorEmail, this.priority);
+				this.startMinute, this.endMinute, Constants.EMAIL_REQUEST, this.advisorEmail, this.priority, this.defaulted);
 		if (r == false) {
 			return this.INITIALIZE_APPOINTMENT_FAIL;
 		}
@@ -64,8 +65,8 @@ public class ScheduleAppointmentBean implements Constants {
 
 			if ((now.get(Calendar.YEAR) == appDate.get(Calendar.YEAR)
 					&& now.get(Calendar.MONTH) == appDate.get(Calendar.MONDAY)
-					&& now.get(Calendar.DAY_OF_MONTH) == appDate.get(Calendar.DAY_OF_MONTH)) ||
-					now.get(Calendar.WEEK_OF_MONTH) == appDate.get(Calendar.WEEK_OF_MONTH)) {
+					&& now.get(Calendar.DAY_OF_MONTH) == appDate.get(Calendar.DAY_OF_MONTH))
+					|| now.get(Calendar.WEEK_OF_MONTH) == appDate.get(Calendar.WEEK_OF_MONTH)) {
 				totalAppointments++;
 				if (totalAppointments > 1) {
 					msg = "Mutiple appointments";
@@ -78,12 +79,12 @@ public class ScheduleAppointmentBean implements Constants {
 		return msg;
 	}
 
-	public String addToWaitlist(){
+	public String addToWaitlist() {
 		String msg = SUCCESS_MESSAGE;
 		Appointment a = new Appointment();
 		boolean r = a.initialize(this.studentMajor, this.studentName, this.studentID, this.studentEmail,
 				this.advisorName, this.type, this.description, this.date, this.startHour, this.endHour,
-				this.startMinute, this.endMinute, Constants.EMAIL_REQUEST, this.advisorEmail, this.priority);
+				this.startMinute, this.endMinute, Constants.EMAIL_REQUEST, this.advisorEmail, this.priority, this.defaulted);
 		if (r == false) {
 			return this.INITIALIZE_APPOINTMENT_FAIL;
 		}
@@ -91,7 +92,7 @@ public class ScheduleAppointmentBean implements Constants {
 		dm.addToWaitlist(a);
 		return msg;
 	}
-	
+
 	public String generateStudentMessage() {
 		String message = "";
 		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
@@ -169,11 +170,15 @@ public class ScheduleAppointmentBean implements Constants {
 		setAdvisorEmail(a.substring(a.indexOf(",") + 1).trim());
 		advisor = a;
 	}
-	
-	public void setPriority(String priority) { 
-        this.priority = priority;
-    }
-	
+
+	public void setPriority(String priority) {
+		this.priority = priority;
+	}
+
+	public void setDefaulted(String defaulted) {
+		this.defaulted = defaulted;
+	}
+
 	// Getters
 	public String getStudentMajor() {
 		return this.studentMajor;
@@ -230,7 +235,12 @@ public class ScheduleAppointmentBean implements Constants {
 	public String getAdvisor() {
 		return this.advisor;
 	}
+
 	public String getPriority() {
-        return this.priority;
-    }
+		return this.priority;
+	}
+
+	public String getDefaulted() {
+		return this.defaulted;
+	}
 }
